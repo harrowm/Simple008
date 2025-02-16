@@ -1,4 +1,8 @@
 (sym_lib_table
   (version 7)
-  (lib (name "Simple008")(type "KiCad")(uri "${KIPRJMOD}/Simple008")(options "")(descr ""))
+  (lib (name "mc68008")(type "KiCad")(uri "${KIPRJMOD}/mc68008.kicad_sym")(options "")(descr ""))
+  (lib (name "ds1233-10+")(type "KiCad")(uri "${KIPRJMOD}/ds1233-10+.kicad_sym")(options "")(descr ""))
+  (lib (name "xr68c681")(type "KiCad")(uri "${KIPRJMOD}/xr68c681.kicad_sym")(options "")(descr ""))
+  (lib (name "as6c8008")(type "KiCad")(uri "${KIPRJMOD}/AS6C8008-55ZIN.kicad_sym")(options "")(descr ""))
+  (lib (name "atf1508as-plcc84")(type "KiCad")(uri "${KIPRJMOD}/atf1508as-plcc84.kicad_sym")(options "")(descr ""))
 )
