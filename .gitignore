@@ -2,7 +2,7 @@
 # Format documentation: https://kicad.org/help/file-formats/
 
 # Temporary files
-.DS_Store
+*.DS_Store
 *.000
 *.bak
 *.bck
