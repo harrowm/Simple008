@@ -12513,6 +12513,26 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Need to add A17 (10) and VPA_n (60)"
+		(exclude_from_sim no)
+		(at 290.576 53.594 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3bfa78c6-c111-4f12-a744-cc9e72836552")
+	)
+	(text "Delete IRQ5 and IRQ6"
+		(exclude_from_sim no)
+		(at 285.496 56.134 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c870ceba-a761-4dc7-b33c-fe69b42d5a8b")
+	)
 	(junction
 		(at 312.42 203.2)
 		(diameter 0)
