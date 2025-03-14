@@ -31,7 +31,7 @@ module simple008(
 
     output reg VPA_n, // Forced to add VPA_n
 
-	inout [7:0] GPIO
+	inout [0:7] GPIO
 );
 
 // CPU cycles between timer interrupts, 10MHz clock and 50x a second
@@ -39,7 +39,16 @@ localparam TIMER_DELAY_CYCLES = 20000000 / 50;
 
 assign WR = !RW;
 
-assign GPIO = 7'b0;
+// assign GPIO = 7'b0;
+// HACK
+assign GPIO[0] = BOOT;
+assign GPIO[1] = ROMSEL_n;
+assign GPIO[2] = RAMSEL1_n;
+assign GPIO[3] = BOOT;  
+assign GPIO[4] = BOOT;
+assign GPIO[5] = BOOT;
+assign GPIO[6] = BOOT;
+assign GPIO[7] = BOOT;
 
 // Default for now
 assign BERR_n = 1'b1;
@@ -56,7 +65,7 @@ assign DUAIACK_n = !(!IACK_n && !AS_n && ADDR_L[2:0] == 3'd5);
 
 // DTACK - is this too simple, should we hold DTACK Low ?
 // DTACK and VPA cannot be low at the same time
-assign DTACK_n = !EXPSEL_n || !DUASEL_n || !RAMSEL1_n || !ROMSEL_n || !VPA_n;
+assign DTACK_n = 1'b0; //!(!EXPSEL_n || !DUASEL_n || !RAMSEL1_n || !ROMSEL_n || !VPA_n);
 
 // BOOT signal generation
 wire BOOT;
@@ -129,8 +138,9 @@ endmodule
 
 // missing a3 a4 a5 a17 vpa_n, dont need A4 and a5 but maybe add for consistency ?
 // footprint of DS1233 isnt correct
-// expansion bus is too close to the CPLD
+// expansion bus is too close to the CPLD and put in labels for signals
 // Need D0-8 on expansion bus if we are going to do SDCARD In CPLD etc
+// The halt LED circuit doesnt work
 
 // -----------------------------------------------------
 // Chip and pin assignments

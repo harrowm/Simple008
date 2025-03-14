@@ -11,13 +11,13 @@ typedef unsigned int uint32_t;
 #define EXCEPTION_AUTOVECTOR 24
 #define EXCEPTION_USER 64
 
-#define IRQ_NUM_IDE 3
+#define IRQ_NUM_IDE 3 // Not used
 #define IRQ_NUM_DUART 5
 #define IRQ_NUM_TIMER 6
 
 #define SYSTEM_NAME "Simple008"
 #define DUART1_BASE 0x3FC000
-#define IDE_BASE 0xFFFFFF
+#define IDE_BASE 0xFFFFFF // Not used 
 
 #define DUART1_MR1A (DUART1_BASE + 0x01)
 #define DUART1_MR2A (DUART1_BASE + 0x01)
